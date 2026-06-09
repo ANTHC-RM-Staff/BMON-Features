@@ -1,0 +1,7 @@
+SELECT  
+       rowid,  
+       name  
+FROM  
+       bmsapp_alertrecipient        
+WHERE  
+       name LIKE '%ANTHC%'
