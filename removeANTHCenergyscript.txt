@@ -1,0 +1,2 @@
+DELETE FROM bmsapp_alertcondition_recipients
+WHERE alertrecipient_id = 159
