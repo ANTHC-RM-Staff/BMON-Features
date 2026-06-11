@@ -11,11 +11,11 @@ SELECT
         bmsapp_alertrecipientgroup.title
 FROM
         bmsapp_building
-INNER JOIN bmsapp_buildinggroup_buildings on bmsapp_buildinggroup_buildings.building_id = bmsapp_building.rowid
+LEFT JOIN bmsapp_buildinggroup_buildings on bmsapp_buildinggroup_buildings.building_id = bmsapp_building.rowid
 LEFT JOIN bmsapp_buildinggroup on bmsapp_buildinggroup_buildings.buildinggroup_id = bmsapp_buildinggroup.rowid
 INNER JOIN bmsapp_bldgtosensor on bmsapp_building.rowid = bmsapp_bldgtosensor.building_id
 INNER JOIN bmsapp_alertcondition on bmsapp_alertcondition.sensor_id = bmsapp_bldgtosensor.sensor_id
-INNER JOIN bmsapp_alertcondition_recipients on bmsapp_alertcondition_recipients.alertcondition_id = bmsapp_alertcondition.rowid
+LEFT JOIN bmsapp_alertcondition_recipients on bmsapp_alertcondition_recipients.alertcondition_id = bmsapp_alertcondition.rowid
 INNER JOIN bmsapp_alertrecipient on bmsapp_alertcondition_recipients.alertrecipient_id = bmsapp_alertrecipient.rowid
 LEFT JOIN bmsapp_alertcondition_recipient_groups on bmsapp_alertcondition.rowid = bmsapp_alertcondition_recipient_groups.alertcondition_id
 LEFT JOIN bmsapp_alertrecipientgroup on bmsapp_alertcondition_recipient_groups.alertrecipientgroup_id = bmsapp_alertrecipientgroup.rowid
