@@ -1,6 +1,7 @@
 import sqlite3  
-  
-conn = sqlite3.connect('/PATH-TO-FILE/bmon.sqlite')  
+import settings
+
+conn = sqlite3.connect(settings.BMON_SQLITE_PATH)  
   
 cursor = conn.cursor()  
   
