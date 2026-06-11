@@ -1,7 +1,7 @@
 SELECT  
-       rowid,  
-       name  
+    rowid,  
+    name  
 FROM  
-       bmsapp_alertrecipient        
+    bmsapp_alertrecipient        
 WHERE  
-       name LIKE '%ANTHC%'
+    name LIKE '%ANTHC%'
