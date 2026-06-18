@@ -9,7 +9,7 @@ cursor = conn.cursor()
 
 for index, row in df.iterrows():
    building_id = row['BMON Building ID']
-   alert_group_id = row['AlertGroupID']
+   alert_group_id = row['Alert Group IDs']
    cursor.execute("SELECT sensor_id FROM bmsapp_bldgtosensor WHERE building_id = ?", (building_id,))
    sensors = cursor.fetchall()
    for sensor in sensors:
